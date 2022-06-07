@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--FontAwesomeの読み込み-->
+  <script src="https://lit.fontawesome.com/4b4cd959ca.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <title>caravan</title>
+  <!--Vue.js,CDN-->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app">
+    <!--header-->
+  <header>
+    <h1 class="heading"><a href="index.html">CARAVAN</a></h1>
+    <div class="social">
+      <i class="fab fa-facebook-square"></i>
+      <i class="fab fa-twitter-square"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+  </header>
+
+  <!--navigation-->
+  <button type="button" class="menu-btn" v-on:click="open=!open">
+    <i class="fas fa-bars" aria-hidden="true"></i>
+  </button>
+  <nav class="menu" v-bind:class="{'is-action': open}">
+      <div class="nav_list_item"><a href="">Home</a></div>
+      <div class="nav_list_item">About</div>
+      <div class="nav_list_item">Topic</div>
+  </nav>
+
+  <!--main_visual-->
+  <div class="main_visual">
+    <div class="main_visual_content">
+      <p class="main_visual_text">The world is a book<br>and those who do not travel<br>read only one page.</p>
+      <p class="main_visual_name">St. Augustine</p>
+    </div>
+  </div>
+
+  <!--main-->
+  <main>
+    <section class="blog">
+      <h2 class="blog_heading">Recent Blogs</h2>
+      <div class="blog_box">
+        <div class="blog_item">
+          <img src="./img/forest.jpg" class="blog_image">
+          <section class="blog_text">
+            <h3 class="blog_text_heading">
+              <a href="single.html">
+                Hopeful lessons from<br>the battle to save<br>rainforests
+              </a>
+            </h3>
+            <p class="blog_date">June 19, 2017</p>
+            <span class="category">Nature</span>
+          </section>
+        </div>
+        <div class="blog_item">
+          <img src="./img/desert.jpg" class="blog_image">
+          <section class="blog_text">
+            <h3 class="blog_text_heading">
+              <a href="single.html">
+                How to fight<br>desertification and<br>reverse climate change
+              </a>
+            </h3>
+            <p class="blog_date">June 17, 2017</p>
+            <span class="category">Nature</span>
+          </section>
+        </div>
+        <div class="blog_item">
+          <img src="./img/sunset.jpg" class="blog_image">
+          <section class="blog_text">
+            <h3 class="blog_text_heading">
+              <a href="single.html">
+                Why I'm rowing<br>across the Pacific
+              </a>
+            </h3>
+            <p class="blog_date">June 16, 2017</p>
+            <span class="category">Adventure</span>
+          </section>
+        </div>
+        <div class="blog_item">
+          <img src="./img/italy.jpg" class="blog_image">
+          <section class="blog_text">
+            <h3 class="blog_text_heading">
+              <a href="single.html">
+                Unseen footage,<br>untamed nature
+              </a>
+            </h3>
+            <p class="blog_date">June 15, 2017</p>
+            <span class="category">Nature</span>
+          </section>
+        </div>
+        <div class="blog_item">
+          <img src="./img/asia.jpg" class="blog_image">
+          <section class="blog_text">
+            <h3 class="blog_text_heading">
+              <a href="single.html">
+                The case for<br>engineering our food
+              </a>
+            </h3>
+            <p class="blog_date">June 14, 2017</p>
+            <span class="category">Culture</span>
+          </section>
+        </div>
+        <div class="pagination">
+          <p><<</p>
+          <p><</p>
+          <p>1</p>
+          <p>2</p>
+          <p>3</p>
+          <p>></p>
+          <p>>></p>
+        </div>
+      </div>
+    </section>
+
+    <!--sidebar-->
+    <div class="sidebar">
+      <section class="popular">
+        <h2 class="popular_heading common_heading">Popular</h2>
+        <div class="sidebar_contents">
+          <p class="popular_text">To solve old problems,<br>study new species</p>
+          <p class="popular_text">Why Earth may someday<br>look like Mars</p>
+          <p class="popular_text">What will humans look<br>like in 100 years?</p>
+          <p class="popular_text">How to grow a forest<br>in your backyard</p>
+          <p class="popular_text">How humans could evolve<br>to survive in space</p>
+        </div>
+      </section>
+      <section class="popular">
+        <h2 class="instagram_heading common_heading">Instagram</h2>
+        <div class="sidebar_contents">
+          <div class="instagram_box"></div>
+          <div class="instagram_box"></div>
+          <div class="instagram_box"></div>
+          <div class="instagram_box"></div>
+          <div class="instagram_box"></div>
+          <div class="instagram_box"></div>
+        </div>
+      </section>
+      <section class="popular">
+        <h2 class="categories_heading common_heading">categories</h2>
+        <div class="sidebar_contents">
+          <p class="categories_text">Technology(15)</p>
+          <p class="categories_text">Business(23)</p>
+          <p class="categories_text">Entertainment(12)</p>
+          <p class="categories_text"></p>
+          <p class="categories_text">Nature(32)</p>
+          <p class="categories_text">Education(9)</p>
+          <p class="categories_text">Adventure(23)</p>
+          <p class="categories_text">Communication(14)</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!--footer-->
+  <footer>
+    <p class="footer_text">© All rights reserved by Infratop.Inc</p>
+  </footer>
+  </div>
+</body>
+</html>
