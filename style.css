@@ -37,16 +37,51 @@ header .heading {
 }
 
 /*nav*/
-.nav_list {
-    text-align: center;
-    padding: 10px 0;
-    margin: 0 auto;
+.nav-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 3;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    color: #fff;
 }
 
-.nav_list_item {
-    list-style: none;
-    display: inline-block;
-    margin: 0 20px;
+.nav_items {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #555;
+}
+.nav_item {
+    width: 100%;
+    height: auto;
+    padding: .5em 1em;
+    text-align: center;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.nav_items {
+    transform: translateX(100vw); /*移動*/
+    transition:  all 1s linear;   /*アニメーション速度一定*/
+}
+
+.nav_items.is-active {
+    transform: translateX(0);
+    font-size: 30px;
+    width: 300px;
 }
 
 /*main_visual*/

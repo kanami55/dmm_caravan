@@ -4,34 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!--FontAwesomeの読み込み-->
-  <script src="https://lit.fontawesome.com/4b4cd959ca.js" crossorigin="anonymous"></script>
+  <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <link rel="stylesheet" href="./style.css">
   <title>caravan</title>
   <!--Vue.js,CDN-->
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
-  <div id="app">
     <!--header-->
   <header>
     <h1 class="heading"><a href="index.html">CARAVAN</a></h1>
-    <div class="social">
-      <i class="fab fa-facebook-square"></i>
-      <i class="fab fa-twitter-square"></i>
-      <i class="fab fa-instagram"></i>
+      <!--navigation,ハンバーバーメニュー-->
+    <div id="app">
+      <button type="button" class="nav-btn" v-on:click="open=!open">
+        <i class="fas fa-bars" aria-hidden="true"></i>
+      </button>
+      <div class="nav_items" v-bind:class="{'is-active' : open }">
+          <div class="nav_item">Home</div>
+          <div class="nav_item">About</div>
+          <div class="nav_item">Topic</div>
+      </div>
     </div>
-  </header>
-
-  <!--navigation-->
-  <button type="button" class="menu-btn" v-on:click="open=!open">
-    <i class="fas fa-bars" aria-hidden="true"></i>
-  </button>
-  <nav class="menu" v-bind:class="{'is-action': open}">
-      <div class="nav_list_item"><a href="">Home</a></div>
-      <div class="nav_list_item">About</div>
-      <div class="nav_list_item">Topic</div>
-  </nav>
 
   <!--main_visual-->
   <div class="main_visual">
@@ -161,6 +156,5 @@
   <footer>
     <p class="footer_text">© All rights reserved by Infratop.Inc</p>
   </footer>
-  </div>
 </body>
 </html>
