@@ -66,6 +66,15 @@ header .heading {
 }
 
 .nav_item {
+    transform: translateX(100vw); /*移動*/
+    transition:  all 3s linear;   /*アニメーション速度一定*/
+}
+
+.nav_item.is-action {
+    transform: translateX(0);
+}
+
+.nav_item {
     width: 100%;
     height: auto;
     padding: .5em 1em;
