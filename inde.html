@@ -13,11 +13,12 @@
 </head>
 
 <body>
+  <div id="app">
     <!--header-->
   <header>
     <h1 class="heading"><a href="index.html">CARAVAN</a></h1>
       <!--navigation,ハンバーバーメニュー-->
-    <div id="app">
+    
       <button type="button" class="nav-btn" v-on:click="open=!open">
         <i class="fas fa-bars" aria-hidden="true"></i>
       </button>
@@ -26,9 +27,7 @@
           <div class="nav_item">About</div>
           <div class="nav_item">Topic</div>
       </div>
-    </div>
-
-  <!--main_visual-->
+    <!--main_isual-->
   <div class="main_visual">
     <div class="main_visual_content">
       <p class="main_visual_text">The world is a book<br>and those who do not travel<br>read only one page.</p>
@@ -156,5 +155,11 @@
   <footer>
     <p class="footer_text">© All rights reserved by Infratop.Inc</p>
   </footer>
+
+  <!--トップへ戻るボタン-->
+  <div class="page_top" v-on:click="scrollTop">
+    <i class="fas fa-angle-up"></i>
+  </div>
+  </div>
 </body>
 </html>
