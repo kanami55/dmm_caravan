@@ -331,15 +331,14 @@ footer {
 }
 
 /*トップへ戻るボタン*/
-.page_top {
+.top_btn {
     position: fixed;
     bottom: 30px;
     right: 30px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #acabab;
-    text-align: center;
+    background: #acabab;
     line-height: 40px;
-    display: inline-block;
+    margin: 0 auto;
 }

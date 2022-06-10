@@ -1,16 +1,15 @@
-var app = new Vue ({
+const app = new Vue ({
     el: '#app',
     data: {
         open: false
     },
-    method: {
-        scrollTop: function() {
+    methods: {
+        pageTop() {
             window.scrollTo({
                 top: 0,
-                behavior: "smooth"
+                behavior: 'smooth'
             })
-        }
+        }  
     }
-
 })
 

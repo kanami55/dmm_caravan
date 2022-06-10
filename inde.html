@@ -159,9 +159,9 @@
     </footer>
 
     <!--トップへ戻るボタン-->
-      <div class="page_top" v-on:click="scrollTop">
-        <i class="fas fa-angle-up"></i>
-      </div>
+      <button v-show="buttonActive" @click="page_top" class="top_btn">
+        <i class="fa-solid fa-angle-up"></i>
+      </button>
   </div>
 </body>
 </html>
