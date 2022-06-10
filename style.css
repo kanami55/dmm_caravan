@@ -329,3 +329,16 @@ footer {
         margin-bottom: 50px;
     }
 }
+
+/*トップへ戻るボタン*/
+.top_btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #acabab;
+    line-height: 40px;
+    margin: 0 auto;
+}
