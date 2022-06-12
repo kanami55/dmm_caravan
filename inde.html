@@ -26,6 +26,7 @@
             <div class="nav_item">Home</div>
             <div class="nav_item">About</div>
             <div class="nav_item">Topic</div>
+            <div class="nav_item">Contact</div>
         </div>
     </header>
 
@@ -102,6 +103,28 @@
               <span class="category">Culture</span>
             </section>
           </div>
+      
+           <!--お問い合わせフォーム-->
+          <div class="form_box">
+            <h2 class="form">お問い合わせ</h2>
+            <div class="form_name">
+              <p>お名前</p>
+              <p class="error_massage">2以上入力して下さい</p>
+              <input type="text" name="name" placeholder="お名前を入力して下さい" v-model="name">
+            </div>
+            <div class="form_phone">
+              <p>電話番号</p>
+              <p class="error_massage">8文字以上で入力して下さい</p>
+              <input type="text" name="phone" placeholder="電話番号を入力して下さい" v-model="phone">
+            </div>
+            <div class="form_email">
+              <p>メールアドレス</p>
+              <p class="error_massage">メール形式で入力して下さい</p>
+              <input type="text" name="email" placeholder="メールアドレスを入力して下さい" v-model="email">
+            </div>
+            <button>送信する</button>
+          </div>
+
           <div class="pagination">
             <p>&lt;&lt;</p>
             <p>&lt;</p>
@@ -159,7 +182,7 @@
     </footer>
 
     <!--トップへ戻るボタン-->
-      <button v-show="buttonActive" @click="page_top" class="top_btn">
+      <button v-show="buttonActive" @click="pageTop" class="top_btn">
         <i class="fa-solid fa-angle-up"></i>
       </button>
   </div>
